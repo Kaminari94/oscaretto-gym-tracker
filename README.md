@@ -4,6 +4,10 @@ Oscaretto Gym Tracker è una Single Page Application sviluppata in Angular come 
 
 L’app permette di gestire una semplice lista di esercizi da palestra direttamente nel browser, con funzionalità di aggiunta, modifica, eliminazione e filtro per gruppo muscolare.
 
+## Demo Live
+
+https://oscaretto-gym-tracker-app.onrender.com/
+
 ## Funzionalità
 
 - Aggiunta di nuovi esercizi
