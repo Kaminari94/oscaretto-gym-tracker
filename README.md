@@ -89,3 +89,7 @@ dist/
 ## Obiettivo del progetto
 
 Il progetto è stato realizzato per dimostrare competenze pratiche nello sviluppo frontend moderno con Angular, utilizzando componenti standalone, signals, reactive forms e una struttura modulare mantenibile.
+
+## Screenshots
+
+![Oscaretto Gym Tracker](./screenshot/Desktop.jpg)
