@@ -1,0 +1,30 @@
+<div class="workout-list">
+  @for (workout of workouts(); track workout.id) {
+    <article class="workout-card">
+      <div>
+        <h3>{{ workout.name }}</h3>
+        <p>{{ workout.muscleGroup }} · {{ workout.sets }}x{{ workout.reps }}</p>
+      </div>
+
+      <div class="buttons">
+        <button
+          class="edit-button"
+          type="button"
+          (click)="edit(workout)"
+        >
+          Modifica
+        </button>
+
+        <button
+          class="delete-button"
+          type="button"
+          (click)="delete(workout.id)"
+        >
+          Elimina
+        </button>
+      </div>
+    </article>
+  } @empty {
+    <p class="empty">Nessun esercizio trovato.</p>
+  }
+</div>

@@ -1,0 +1,51 @@
+<form [formGroup]="form" (ngSubmit)="submit()" class="workout-form">
+  <div class="field">
+    <label for="name">Esercizio</label>
+    <input
+      id="name"
+      type="text"
+      formControlName="name"
+      placeholder="Es. Panca piana"
+    />
+
+    @if (form.controls.name.touched && form.controls.name.invalid) {
+      <small>Inserisci almeno 2 caratteri.</small>
+    }
+  </div>
+
+  <div class="field">
+    <label for="muscleGroup">Gruppo muscolare</label>
+    <select id="muscleGroup" formControlName="muscleGroup">
+      @for (group of muscleGroups; track group) {
+        <option [value]="group">{{ group }}</option>
+      }
+    </select>
+  </div>
+
+  <div class="field">
+    <label for="sets">Serie</label>
+    <input id="sets" type="number" formControlName="sets" min="1" />
+
+    @if (form.controls.sets.touched && form.controls.sets.invalid) {
+      <small>Le serie devono essere almeno 1.</small>
+    }
+  </div>
+
+  <div class="field">
+    <label for="reps">Ripetizioni</label>
+    <input id="reps" type="number" formControlName="reps" min="1" />
+
+    @if (form.controls.reps.touched && form.controls.reps.invalid) {
+      <small>Le ripetizioni devono essere almeno 1.</small>
+    }
+  </div>
+
+	<button type="submit">
+	  {{ workoutToEdit() ? 'Salva modifiche' : 'Aggiungi esercizio' }}
+	</button>
+	@if (workoutToEdit()) {
+	  <button type="button" class="secondary" (click)="cancel()">
+		Annulla modifica
+	  </button>
+	}
+</form>

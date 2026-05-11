@@ -1,59 +1,91 @@
-# OscarettoGymTracker
+# Oscaretto Gym Tracker
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.9.
+Oscaretto Gym Tracker è una Single Page Application sviluppata in Angular come progetto portfolio.
 
-## Development server
+L’app permette di gestire una semplice lista di esercizi da palestra direttamente nel browser, con funzionalità di aggiunta, modifica, eliminazione e filtro per gruppo muscolare.
 
-To start a local development server, run:
+## Funzionalità
+
+- Aggiunta di nuovi esercizi
+- Modifica degli esercizi esistenti
+- Eliminazione degli esercizi
+- Filtro per gruppo muscolare
+- Persistenza dati tramite localStorage
+- Layout responsive desktop/mobile
+- Architettura frontend modulare e scalabile
+
+## Stack Tecnologico
+
+- Angular
+- TypeScript
+- Angular Router
+- Standalone Components
+- Reactive Forms
+- Angular Signals
+- Services
+- localStorage
+- SCSS
+
+## Struttura del Progetto
+
+```text
+src/app/
+├── components/
+│   ├── navbar/
+│   ├── workout-form/
+│   └── workout-list/
+├── models/
+│   └── workout.model.ts
+├── pages/
+│   ├── about/
+│   ├── home/
+│   └── workouts/
+└── services/
+    └── workout.service.ts
+```
+
+## Architettura
+
+Il progetto separa responsabilità e logica applicativa:
+
+- `Workouts` gestisce orchestrazione, stato e filtro
+- `WorkoutForm` gestisce reactive forms e validazione
+- `WorkoutList` si occupa della visualizzazione della lista
+- `WorkoutService` centralizza CRUD e persistenza dati
+- `Workout` model definisce la struttura tipizzata dei dati
+
+## Avvio in locale
+
+Installazione dipendenze:
+
+```bash
+npm install
+```
+
+Avvio server di sviluppo:
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Applicazione disponibile su:
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+```text
+http://localhost:4200
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
+## Build Produzione
 
 ```bash
 ng build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+La build finale verrà generata nella cartella:
 
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
+```text
+dist/
 ```
 
-## Running end-to-end tests
+## Obiettivo del progetto
 
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Il progetto è stato realizzato per dimostrare competenze pratiche nello sviluppo frontend moderno con Angular, utilizzando componenti standalone, signals, reactive forms e una struttura modulare mantenibile.

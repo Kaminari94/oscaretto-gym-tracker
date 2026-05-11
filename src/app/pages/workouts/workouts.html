@@ -1,0 +1,40 @@
+<section class="workouts-page">
+  <header class="page-header">
+    <p class="eyebrow">Workout manager</p>
+    <h1>I tuoi esercizi</h1>
+    <p>
+      Aggiungi, filtra e gestisci gli esercizi salvati nel browser tramite localStorage.
+    </p>
+  </header>
+
+  <div class="layout">
+    <app-workout-form
+	  [workoutToEdit]="selectedWorkout()"
+	  (workoutSaved)="saveWorkout($event)"
+	  (editCancelled)="cancelEdit()"
+	/>
+
+    <section class="workout-panel">
+      <div class="panel-header">
+        <h2>Lista esercizi</h2>
+
+        <select (change)="onFilterChange($event)">
+          <option value="">Tutti</option>
+          <option value="Petto">Petto</option>
+          <option value="Schiena">Schiena</option>
+          <option value="Gambe">Gambe</option>
+          <option value="Spalle">Spalle</option>
+          <option value="Braccia">Braccia</option>
+          <option value="Core">Core</option>
+          <option value="Altro">Altro</option>
+        </select>
+      </div>
+
+		<app-workout-list
+		  [workouts]="filteredWorkouts()"
+		  (editClicked)="edit($event)"
+		  (deleteClicked)="delete($event)"
+		/>
+    </section>
+  </div>
+</section>

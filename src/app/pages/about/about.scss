@@ -1,0 +1,42 @@
+.about-page {
+  display: grid;
+  gap: 24px;
+  max-width: 850px;
+}
+
+.eyebrow {
+  margin: 0;
+  color: #2563eb;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2.2rem, 5vw, 4rem);
+}
+
+.intro {
+  margin: 0;
+  color: #4b5563;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.about-card {
+  padding: 24px;
+  border: 1px solid #e5e7eb;
+  border-radius: 24px;
+  background: #ffffff;
+}
+
+.about-card h2 {
+  margin-top: 0;
+}
+
+.about-card li,
+.about-card p {
+  color: #4b5563;
+  line-height: 1.7;
+}
