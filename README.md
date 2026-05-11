@@ -97,3 +97,5 @@ Il progetto è stato realizzato per dimostrare competenze pratiche nello svilupp
 ## Screenshots
 
 ![Oscaretto Gym Tracker](./screenshot/Desktop.jpg)
+
+![Oscaretto Gym Tracker](./screenshot/Mobile.jpg)
